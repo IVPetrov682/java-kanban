@@ -1,0 +1,6 @@
+1,TASK,Изучить Java,INPROGRESS,null,null;
+2,TASK,Сходить в спорот зал,INPROGRESS,null,null;
+3,SUBTASK,Привет,NEW,null,null;
+4,SUBTASK,Счетчик,NEW,null,null;
+5,TASK,Убраться дома,INPROGRESS,null,null;
+6,EPIC,Счетчик,NEW,null,null;
