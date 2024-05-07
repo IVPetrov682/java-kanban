@@ -1,0 +1,7 @@
+1,TASK,Изучить Java,INPROGRESS,null,null;
+2,TASK,Восьмая,NEW,null,null;
+3,TASK,на счетчике 6,NEW,null,null;
+4,TASK,Новый счетчик,NEW,null,null;
+5,TASK,Убраться дома,INPROGRESS,null,null;
+7,SUBTASK,Должна быть 7,NEW,null,null;
+6,EPIC,Счетчик,NEW,null,null;
