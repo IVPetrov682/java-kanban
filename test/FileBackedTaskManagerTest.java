@@ -17,16 +17,16 @@ class FileBackedTaskManagerTest {
     final String testValue = "1,TASK,Изучить Java,INPROGRESS,null,null;";
 
     @Test
-    void saveToFile()  throws IOException { // метод записи файл
-            try (Writer fileWriter = new FileWriter("src\\logic\\" + fileBackedTM, StandardCharsets.UTF_8)) {
-                // инициализация метода преобразования в строку и запись в файл
-                fileWriter.write(testValue);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-                System.out.println();
-            }
-        taskFromString();
+    void saveToFile() throws IOException { // метод записи файл
+        try (Writer fileWriter = new FileWriter("src\\logic\\" + fileBackedTM, StandardCharsets.UTF_8)) {
+            // инициализация метода преобразования в строку и запись в файл
+            fileWriter.write(testValue);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.out.println();
         }
+        taskFromString();
+    }
 
     @Test
     public void taskFromString() { // метод формирования задач из файла
