@@ -29,9 +29,9 @@ public class SubTask {
     }
 
     public static void startVal() {
-        // с второстепенными задачами
         numberSubTask = new HashMap<>();
     }
+
     public int getiD() {
         return iD;
     }
