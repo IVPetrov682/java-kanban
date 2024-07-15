@@ -40,7 +40,6 @@ class InMemoryHistoryManager implements HistoryManager {
                 history.deleteNode(del); // удаляем нод из самодельного списка через node
                 nodeHistory.remove(iD); // удаляем строку в таблице в истории задач
                 nodeHistory.put(iD, history.linkLast(allTask)); // Добавляем новое значение
-            } else {
             }
         } else {
             nodeHistory.put(iD, history.linkLast(allTask));
@@ -53,8 +52,6 @@ class InMemoryHistoryManager implements HistoryManager {
 
     @Override
     public List<AllTask> getHistory() { // команда 8
-        if (history != null) {
-        }
         return history.taskViewSheet(); // Для списка просмотренных задач нужен тип Task. Метод getHistory должен возвращать список именно такого типа. В итоге он будет выглядеть так — List<Task> getHistory()
     }
 
