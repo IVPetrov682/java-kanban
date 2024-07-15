@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 public class FileBackedTaskManager extends InMemoryTaskManager {
 
     private static final String fileBackedTM = "FileBackedTM.txt";
+
     public static void createFileBackedTM() { // Создаем файл FileBackedTM, в который будем записывать и считывать информацию
         if (!Files.exists(Paths.get("src\\logic\\" + fileBackedTM))) { // проверка на наличие файла
             try {
@@ -32,9 +33,9 @@ public class FileBackedTaskManager extends InMemoryTaskManager {
     public void saveToFile() throws IOException { // метод записи файл
         try (Writer fileWriter = new FileWriter("src\\logic\\" + fileBackedTM, StandardCharsets.UTF_8)) {
             fileWriter.write(toStringTask(Task.numberTask));
-            fileWriter.write("\n");
+            //fileWriter.write("\n");
             fileWriter.write(toStringTask(SubTask.numberSubTask));
-            fileWriter.write("\n");
+            //fileWriter.write("\n");
             fileWriter.write(toStringTask(Epic.numberEpic));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -70,14 +71,14 @@ public class FileBackedTaskManager extends InMemoryTaskManager {
             }
             if (type.toString().equals(TypeTask.EPIC.toString())) {
                 duration = null; // обнулили
-                for (int ID : connectioniD)
+                for (int number : connectioniD)
                     if (duration == null) {
-                        if (duration != SubTask.numberSubTask.get(ID).getDuration()) {
-                            duration = SubTask.numberSubTask.get(ID).getDuration();
+                        if (duration != SubTask.numberSubTask.get(number).getDuration()) {
+                            duration = SubTask.numberSubTask.get(number).getDuration();
                         }
                     } else {
-                        if (duration != SubTask.numberSubTask.get(ID).getDuration()) {
-                            duration = duration.plus(SubTask.numberSubTask.get(ID).getDuration());
+                        if (duration != SubTask.numberSubTask.get(number).getDuration()) {
+                            duration = duration.plus(SubTask.numberSubTask.get(number).getDuration());
                         }
                     }
                 duration.toMinutes();
