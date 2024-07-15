@@ -1,4 +1,4 @@
-package test.src;
+package test;
 
 import logic.HistoryManager;
 import logic.Managers;

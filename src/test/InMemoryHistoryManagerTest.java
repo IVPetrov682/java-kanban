@@ -34,8 +34,8 @@ class InMemoryHistoryManagerTest {
     @Test
     void add() {
         HistoryManager historyManager = Managers.getDefaultHistory();
-        Task task = new Task(1, TypeTask.TASK, "Вася", Status.NEW, "Описание", duration, startTime, null);
-        historyManager.add(task);
+        AllTask allTask = new AllTask(1, TypeTask.TASK, "Вася", Status.NEW, "Описание", duration, startTime, null);
+        historyManager.add(allTask);
         final List<AllTask> history = historyManager.getHistory();
         assertNotNull(history, "Список заполнен");
         assertEquals(1, history.size(), "Список заполнен");
