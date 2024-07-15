@@ -39,7 +39,7 @@ public class AllTask {
 
 
     public LocalDateTime getEndTime() {
-        LocalDateTime EndTime = startTime.plus(duration);
+        LocalDateTime endTime = startTime.plus(duration);
         if (type.toString().equals(TypeTask.EPIC.toString())) {
             ArrayList<LocalDateTime> dataTimesList = new ArrayList<>();
             Duration durationSum = null;
@@ -49,9 +49,9 @@ public class AllTask {
                 durationSum = durationSum.plus(Epic.numberEpic.get(connectID).getDuration());
             }
             Optional<LocalDateTime> startTimeList = dataTimesList.stream().min(LocalDateTime::compareTo);
-            EndTime = startTimeList.get().plus(durationSum);
+            endTime = startTimeList.get().plus(durationSum);
         }
-        return EndTime;
+        return endTime;
     }
 
     public int getID() {
