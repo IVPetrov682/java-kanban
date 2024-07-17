@@ -1,1 +1,1 @@
-1,TASK,Изучить Java,INPROGRESS,null,null;
+1,TASK,Изучить Java,INPROGRESS,null,null,null,null,null;
