@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FileBackedTaskManagerTest {
     private static final String fileBackedTM = "Test.txt";
-    final String testValue = "1,TASK,Изучить Java,INPROGRESS,null,null;";
+    final String testValue = "1,TASK,Изучить Java,INPROGRESS,null,null,null,null,null;";
 
     @Test
     void saveToFile()  throws IOException { // метод записи файл
